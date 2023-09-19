@@ -1,4 +1,5 @@
 import { RouterModule } from '@angular/router';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 
@@ -13,7 +14,7 @@ const routes = [
   },
   {
     path: 'movies/:id',
-    component: HomeComponent,
+    component: MovieDetailComponent,
   },
   {
     path: '**',

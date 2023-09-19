@@ -1,0 +1,32 @@
+<!-- <div *ngIf="movie != undefined">
+  <h1 class="text-white">Id Pelicula: {{movie.id}}</h1>
+  <h1 class="text-white">Nombre de la pelicula: {{movie.name}} </h1>
+  <h1 class="text-white">Descripcion: {{movie.description}}</h1>
+</div>
+
+ <div *ngIf="movie == undefined">
+  <h1 class="text-white">No se encontro la pelicula</h1>
+</div> -->
+
+
+<!--<div *ngIf=else noMovie ">
+  <h1 class="text-white">Id Pelicula: {{movie."movie != undefined; id}}</h1>
+  <h1 class="text-white">Nombre de la pelicula: {{movie.name}} </h1>
+  <h1 class="text-white">Descripcion: {{movie.description}}</h1>
+</div>
+
+<ng-template #noMovie>
+  <h1 class="text-white">No se encontro la pelicula</h1>
+</ng-template> -->
+
+
+
+<ng-template [ngIf]="movie != undefined" ; [ngIfElse]="noMovie" ;>
+  <h1 class="text-white">Id Pelicula: {{movie.id}}</h1>
+  <h1 class="text-white">Nombre de la pelicula: {{movie.name}} </h1>
+  <h1 class="text-white">Descripcion: {{movie.description}}</h1>
+</ng-template>
+
+<ng-template #noMovie>
+  <h1 class="text-white">No se encontro la pelicula</h1>
+</ng-template>

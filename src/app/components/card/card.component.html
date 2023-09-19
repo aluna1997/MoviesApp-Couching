@@ -1,14 +1,11 @@
-<!-- <mat-grid-tile *ngFor="let item of arrayPeliculas"> -->
-
 <mat-card class="example-card">
   <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p class="text-white">
-      <!-- {{item.name}} -->
+      {{movie.name}}
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>Ver mas</button>
+    <button mat-button [routerLink]="['/movies', movie.id]">Ver mas</button>
   </mat-card-actions>
 </mat-card>
-<!-- </mat-grid-tile> -->
