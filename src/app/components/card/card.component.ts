@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MovieInterface } from 'src/app/pages/home/home.interface';
+import { Result } from 'src/app/interfaces/movies.interface';
 
 @Component({
   selector: 'app-card',
@@ -7,12 +7,6 @@ import { MovieInterface } from 'src/app/pages/home/home.interface';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponentc {
-  @Input() public movie: MovieInterface = {
-    id: 0,
-    name: '',
-    description: '',
-    image: '',
-  };
-
+  @Input() public movie: Result | undefined;
   constructor() {}
 }

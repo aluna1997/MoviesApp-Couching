@@ -1,6 +1,6 @@
 <div class="container">
   <mat-grid-list cols="4" rowHeight="2:1">
-    <mat-grid-tile *ngFor="let item of arrayPeliculas">
+    <mat-grid-tile *ngFor="let item of movies?.results">
       <app-card [movie]="item"></app-card>
     </mat-grid-tile>
   </mat-grid-list>

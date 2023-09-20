@@ -1,44 +1,26 @@
-import { Component } from '@angular/core';
-import { MovieInterface } from './home.interface';
+import { Component, OnInit } from '@angular/core';
+import { ResponseMoviesInterface } from 'src/app/interfaces/movies.interface';
+import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
-  isLoading = true;
+export class HomeComponent implements OnInit {
+  public movies?: ResponseMoviesInterface;
 
-  arrayPeliculas: MovieInterface[] = [
-    {
-      id: 1,
-      name: 'Pelicula 1',
-      description: 'Descripcion de la pelicula 1',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    },
-    {
-      id: 2,
-      name: 'Pelicula 2',
-      description: 'Descripcion de la pelicula 2',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    },
-    {
-      id: 3,
-      name: 'Pelicula 3',
-      description: 'Descripcion de la pelicula 3',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    },
-    {
-      id: 4,
-      name: 'Pelicula 4',
-      description: 'Descripcion de la pelicula 4',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    },
-    {
-      id: 5,
-      name: 'Pelicula 5',
-      description: 'Descripcion de la pelicula 5',
-      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    },
-  ];
+  constructor(private _moviesService: MoviesService) {}
+
+  ngOnInit(): void {
+    this._moviesService.getPopularMovies().subscribe({
+      next: (response) => {
+        this.movies = response;
+        console.log(this.movies);
+      },
+      error: (error) => {
+        console.error(error);
+      },
+    });
+  }
 }

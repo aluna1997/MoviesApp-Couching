@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,6 +28,8 @@ import { MaterialSharedModule } from './shared/app.material-shared.module';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialSharedModule,
+    HttpClientModule,
+
     AppRouting,
   ],
   providers: [],
