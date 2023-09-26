@@ -21,10 +21,10 @@
 
 
 
-<ng-template [ngIf]="movie != undefined" ; [ngIfElse]="noMovie" ;>
-  <h1 class="text-white">Id Pelicula: {{movie.id}}</h1>
-  <h1 class="text-white">Nombre de la pelicula: {{movie.name}} </h1>
-  <h1 class="text-white">Descripcion: {{movie.description}}</h1>
+<ng-template [ngIf]="movieDetail != undefined" ; [ngIfElse]="noMovie" ;>
+  <h1 class="text-white">Id Pelicula: {{movieDetail.id}}</h1>
+  <h1 class="text-white">Nombre de la pelicula: {{movieDetail.title}} </h1>
+  <h1 class="text-white">Descripcion: {{movieDetail.tagline}}</h1>
 </ng-template>
 
 <ng-template #noMovie>

@@ -1,7 +1,7 @@
-<mat-card class="example-card" *ngIf="movie != undefined">
-  <img mat-card-image [src]="'https://image.tmdb.org/t/p/original/' + movie.poster_path" alt="Photo of a Shiba Inu">
+<mat-card *ngIf="movie != undefined">
+  <img class="example-card" mat-card-image [src]="'https://image.tmdb.org/t/p/original/' + movie.poster_path">
   <mat-card-content>
-    <p class="text-white">
+    <p class="text-white break-after-50">
       {{movie.original_title}}
     </p>
   </mat-card-content>
